@@ -18,16 +18,14 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Lone Structure </div> <span> - Naturally Spawn</span>
           </div>
         
 
           <!-- Youtube Embed -->
           <div class="video-wrapper">
               <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/_iCHA5QU6y0" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,19 +35,101 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
-              <hr><br>
               <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
+                <span class="subtitle">Saving A Structure:</span> <br><br><hr><br>
+              </span>
+              
+              At the start of the video, I give myself a "<p class="mc-light-purple">Structure Block</p>." I gave a specific name. <br><br> <p class="mc-gold">chocolate:grave</p>. My datapack is called chocolate, this structure is a grave. Follow the pattern of <strong>datapackname:anything</strong>. <br><br>
+
+              In the video, you see I clicked "<strong>SEE INVISIBLE BLOCKS</strong>." You see <p class="mc-light-purple">pink</p> and <p class="mc-blue">blue</p> boxes.
+
+              <br><br>
+
+              That's because, the white border around my structure is a cube, but I don't want my corners included. The "<p class="mc-light-purple">Structure Void</p>," can be placed in the gaps of my structure.
+
+              <br><br>
+
+              Those gaps, the world will naturally fill. A desert it'll be sand, plains -> grass, cave -> stone.
+              <br><br>
+              Now SAVE.
+
+              <br><br><br><br>
+
+              <span>
+                <br>
+                <span class="subtitle">Code:</span> <br><br><hr><br>
+
+                In the rest of the video, we mostly deal in <p class="mc-dark-gray">"code"</p>.<br><br> I say <p class="mc-dark-gray">"code"</p> since we are just making files in the right pattern, and using a <p class="mc-dark-green">website</p> to generate code. 
+
                 <br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
+                <p class="mc-green">Follow Chapter Two as the video shows...</p> <br><br>
+                
+                In <p class="mc-green">Chapter Three</p> we are <strong>grabbing the structure we saved</strong>, the only difference for you, would be the world name and the datapack name but the way to get there is the same.
+                <br><br>
+
+                Now, we are using a site called <a href="https://misode.github.io/" target="_blank">Misode</a> <br><br><br><br>
+
+                <span class="subtitle">Misode:</span> <br><br><hr><br>
+
+                <p class="mc-green">Chapter Four</p> in the video I go to "Template Pool". This gives descriptions of each part of my structure <strong>(We only have one).</strong>
+                <br><br>
+                &#8618; <p class = "mc-gold">Fallback</p> is minecraft:empty, so it either spawns or doesn't.<br>
+                &#8618; <p class = "mc-gold">Single Pool</p> Element is us saying "We only have one piece"<br>
+                &#8618; <p class = "mc-gold">Projection</p> is how it spawns in on the ground; terrain matching, molds to the environment, rigid just makes it not move.<br>
+                &#8618; <p class = "mc-gold">Location</p> is the name we saved in the structure<br>
+                &#8618; <p class = "mc-gold">Processors</p> is for block decay (skip)
+                <br><br><br>
+
+                <p class="mc-green">Chapter Five</p> is the Structure Set, where your structure can spawn <strong>mathematically.</strong>
+                <br><br>
+                &#8618; <p class = "mc-gold">Spacing</p> is how far spawn attempts will be in chunks.<br>
+                &#8618; <p class = "mc-gold">Seperation</p> is how many chunks of free space in the world is needed to spawn. <em>Spacing > Seperation</em>.<br>
+                &#8618; <p class = "mc-gold">Spread</p> type is saying spawn in lines or triangles. <br>
+                &#8618; <p class = "mc-gold">Salt</p> is just a big random number.<br>
+                &#8618; <p class = "mc-gold">Frequency</p> is just a 0-1 chance of will it spawn or not?<br><br>
+                &#8618; <p class = "mc-gold">Add Structure</p> just add your structure name from your file.<br>
+
+                <br><br><br>
+
+                <p class="mc-green">Chapter Six</p> is the Structure, it's some ultra specific spawning settings.</strong>
+                <br><br>
+                &#8618; <p class = "mc-gold">Biomes</p> references a file we have yet to make, for the biomes it can spawn in. <em>#datapackname:has_structure/structurename</em><br><br>
+                &#8618; <p class = "mc-gold">Step</p> is saying when doing this step of world generation, do mine next.<br>
+                &#8618; <p class = "mc-gold">Start Pool</p> is our structure.<br>
+                &#8618; <p class = "mc-gold">Project Start To Heightmap</p> tells it, spawn on the ground or sea. We chose WORLD_SURFACE_WG for the ground.<br>
+                &#8618; <p class = "mc-gold">Start Height</p> if you remove the step above, you can make it spawn at a specific Y level. Optional<br>
                 <br>
-                <br>
+                <p class = "mc-dark-green">The rest can be left default.</p>
+
+                <br><br><br>
+
+                <p class="mc-green">Chapter Seven</p> is the Biome, just a list of the biomes.</strong>
+                <br><br>
+
+                <hr><br><br>
+
+                Certain options were skipped since they are for multi step structures, the next module.<br><br>
+
+                Now, we just <p class="mc-aqua">save everything</p>.<br> Add the datapack to a new world, and <p class="mc-dark-aqua">now you have your structure!</p><br><br>
+
+
+
+                
+
+                
+
+
               </span>
-              <!-- Tooltips content later -->
+
+              
+              
+
+
+
+
+
+
           </div>
             
         </div>
