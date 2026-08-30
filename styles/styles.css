@@ -473,7 +473,11 @@ pre {
 
 
 a:visited {
-    color: #FF5555; text-shadow: 2px 2px 0 #5A1A1A; display: inline;
+    color: #ededed; text-shadow: 2px 2px 0 #5A1A1A; display: inline;
+}
+
+a {
+    color: #ffffff; text-shadow: 2px 2px 0 #5A1A1A; display: inline;
 }
 
 .subtitle {
@@ -536,3 +540,10 @@ a:visited {
 /* Optional: Bold/Italic versions */
 .mc-bold { font-weight: bold; }
 .mc-italic { font-style: italic; }
+
+.example {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 4px;
+    border: white solid 3px;
+}

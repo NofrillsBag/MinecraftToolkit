@@ -18,16 +18,14 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text"> Villages </div> <span></span>
           </div>
         
 
           <!-- Youtube Embed -->
           <div class="video-wrapper">
               <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/PDzJjyxV9QQ" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,19 +35,101 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
-              <hr><br>
-              <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
-                <br><br>
+          <span class="subtitle">More Folders:</span> <br><br><hr><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
-              </span>
-              <!-- Tooltips content later -->
+          For multi piece structures, we need to organize our structures; <strong>that means more folders.</strong><br><br>
+
+          Me personally, I'm going to make a <p class="mc-dark-aqua">village in the sky</p>. It has a town center island, bridges, and house islands. <br><br>
+
+          In the video, you see me adding my structure name (<p class="mc-dark-aqua">sky_village</p>), then inside that folder I added my "pieces" street, town_centers, houses (<em>our structure saves go here</em>).<br><br> Then, I added a new folder inside template_pool called <p class="mc-dark-aqua">sky_village</p> too.
+          
+          <br><br><br><hr><br>
+          <span class="subtitle">The Minecraft Side:</span> 
+          <br><br>
+
+          Here (World Download Avaliable), I have my town_centers (beacon Island), my street (bridges) and my houses (other islands). How we connect them, is by a <p class = "mc-light-purple">Jigsaw Block.</p> <br><br>
+          
+          In the video, I will put <p class = "mc-light-purple">Jigsaw Blocks</p> on the end of my streets, so eventually they can all connect, but for that to happen; <p class = "mc-red"> each piece needs to know: </p> <em>"What am I doing?"</em><br><br>
+
+          <br><br><hr><br>
+          <p class = "mc-aqua" style = "font-size: 18px;">Connecting street, and town center:</p> <br><br>
+
+          I have 4 street types, which is all you need for a nice looking village, now I have to add the <p class="mc-light-purple">Jigsaw Blocks</p> to the ends. <br><br>
+          
+          &#8618; <p class = "mc-gold">I put </p>chocolate:sky_village/street in the first box <em>the folder with all of our streets.</em> This means, this block will look to spawn more streets. <br><br>
+          &#8618; <p class = "mc-gold">Then, </p> I put both chocolate:street as the <strong>name, and target name</strong>. This just means, I want streets to connect and spawn next to things named "chocolate:street".<br>
+          
+          <br><br>
+          
+          Then, let's get an island in. Our town center spawns in first, so we just want it to spawn in and connect streets, we can <strong>copy the street <p class="mc-light-purple">Jigsaw Block</p> and place it on all sides.</strong> <br><br><br> Already half way done. <br><br><br>
+          
+          <br><br><hr>
+
+           <p class = "mc-aqua" style = "font-size: 18px;">Connecting bridges to other islands:</p><br><br>
+
+           Let's go back to our streets; currently streets only spawn in and connect to other streets. <br><br> <em>We want them to also spawn in and connect to houses.</em><br><br>
+
+           &#8618; <p class = "mc-gold">On a new side </p> put in the first box chocolate:sky_village/houses the folder we will store our houses in.<br><br>
+           &#8618; <p class = "mc-gold">On the 2nd and 3rd box,</p> put chocolate:housing_entrance, meaning we want it to spawn and connect to pieces named chocolate:housing_entrance.<br><br><br>
+        
+           <br><br><hr>
+
+           <p class = "mc-aqua" style = "font-size: 18px;">The other islands:</p><br><br> 
+
+           Lastly, go to our other islands, <em>the final piece.</em> <br><br>
+
+           &#8618; <p class = "mc-gold">Place a jigsaw block on the entrance, </p> in the first box, do minecraft:empty, we don't want to spawn anything else from this island, it's ends here.<br><br>
+           &#8618; <p class = "mc-gold">On the 2nd and 3rd box,</p> copy & paste chocolate:housing_entrance, this means those street sides will connect to these islands.<br><br><br>
+
+           <br><br>
+
+           LASTLY! We have to save all of our structures, with <p class="mc-light-purple">structure blocks</p>. Use the naming scheme <strong>chocolate:name, chocolate:town_centers</strong> is my town center island for example. 
+
+          <br><br><br><hr><br>
+          <span class="subtitle">Code:</span> 
+          <br><br>
+
+          These files and our code <p class="mc-dark-red">don't change much</p>, from lone structures.
+          <br><br>
+          
+          > You add a <strong>biome</strong> json for the biomes named sky_village. <br><br>
+          > You add a <strong>structure set</strong> json for the math of the spawning <br><br>
+          > You add a <strong>structure</strong> json for specific spawn settings, I have <p class="mc-green">two specific settings</p> for this.
+          <br><br><br>
+          &#8618; <p class = "mc-gold"> Remove</p> "project_start_to_heightmap" : "WORLD_SURFACE_WG" because it's in the sky, not ground. 
+          <br><br>&#8618; <p class = "mc-gold"> The line, </p>"start height, above bottom", spawns 214 blocks above -64 (bedrock) so Y 150. <br><br>
+
+          <br><br><hr>
+          <br><br>
+
+          LASTLY, <p class="mc-dark-purple">template_pool</p>, town_centers, houses, street are in seperate files.<br><br>
+          It looks the same as the grave, template pool, the difference is it's <strong>now a list</strong>, and we have it in seperate files.<br><br>
+
+          Done, go into a new world, place this new datapack in there, and spawn it with <p class="mc-dark-aqua">/place structure chocolate:sky_vilage</p>.<br><br>
+          <hr><br>
+
+          <p class = "mc-aqua" style = "font-size: 18px;">Tweaks:</p><br><br> 
+
+          &#8618; <p class = "mc-gold">Save Entities</p> to have villagers. <br><br>
+
+          &#8618; <p class = "mc-gold">The village is a little bit small </p>, ideally you want more islands and streets, you can do that by putting more street jigsaw blocks on the house islands (Yellow blocks on the world) then re-saving them into the pack.<br><br>
+
+          &#8618; <p class = "mc-gold">The island randomness </p> looks pretty static. Go back to template_pool and add some randomness to the "weight", and add an empty street, and if you want add the other house islands.<br><br>
+
+          &#8618; <p class = "mc-gold">Make sure</p> all of your house structure blocks have the structure blocks at the SAME Y level.<br><br><br>
+
+          <br><br><hr>
+
+          Here is an example of one of mine. <br><br>
+
+          <img src = "../images/Example Of Mine.png" class="example"><br><br><br>
+
+
+
+          If you add those tweaks, <strong>replace the updated datapack</strong> into the world again.
+           
+        
+        
           </div>
             
         </div>
