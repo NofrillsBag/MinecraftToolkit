@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Recipes</div> <span> - Overriding or Custom</span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/CsiONSZ2_LQ" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,17 +37,64 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
+              <h1>Recipes</h1>
               <hr><br>
               <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
+
+                <span class="subtitle">Code For Custom Recipes:</span> <br><br><br>
+                Again, we use <a href="https://misode.github.io/" target="_blank">Misode</a> to generate our <p class="mc-gray">code</p>.
+                
                 <br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
+                We can do a BUNCH of recipe types. <em>Most commonly</em>, you'd do; <p class="mc-dark-gray">crafting shaped, shapeless, and smelting. <br><p class="mc-dark-gray">(The only difference it the pattern section, but it's pretty intuitive.)</p><br> </p><br> Let's do <p class="mc-dark-aqua">Crafting Shaped</p> for now.<br><br>
+                
+                <br><hr><br>
+
+                <p class = "mc-aqua" style = "font-size: 18px;">Recipe for Item without a recipe</p> <br><br><br>
+
+                Let's make a recipe for say; a <p class="mc-dark-green">poisonous potato</p>.  <br><br>
+
+                We chose Crafting Shaped, then <p class="mc-green">(+)</p> on pattern. Like a tic tac toe grid and we use <em>placeholder letters</em> to act as our ingredients. <br><br> Chose what <p class="mc-gray"> those letters represent</p> in "Key"<br><br>
+
+                And give the result as <p class="mc-dark-green">poisonous potato</p>. <p class="mc-dark-gray">(Copy & save that somewhere)</p> <br>
+
+                <br><br><hr><br>
+                <p class = "mc-aqua" style = "font-size: 18px;">Recipe for a custom item:</p> <br><br>
+
+                There's a <em>quirk</em> with custom items. <br><br><br>
+
+                Say I want like a <strong>cool custom item</strong> for a story map, I can't make the result "paper" then change the name. You might accidentally use it in a crafting a book. <p class="mc-gold ">So you use a placeholder item.</p> <br><br><br>
+
+                Which is why we use the <p class="mc-dark-aqua">DEBUG STICK</p>, it can't be used at all in survival. COMPONENTS <em>(just like the loot table)</em> let you change everything about it, <p class="mc-gray">name, texture, lore.</p> <br><br><br>
+
+                Looking at the video, we can see I made a recipe for a <p class="mc-dark-aqua">DEBUG STICK</p> that looks like a <p class="mc-dark-green">Emerald Block</p>. with a custom name and lore. <br><br>
+
+                <p class="mc-dark-gray"> For fun, try messing with set attribute modifiers; we'll cover that in custom armour / tool.</p>
+
+                <br><br><br><hr><br>
+
+                <span class="subtitle">Folders For Custom Recipes:</span> <br><br><br>
+
+                For these two custom recipes, we make a new folder called recipe inside our <p class="mc-dark-gray">CUSTOM DATATPACK NAMED</p> folder. <br><br> Then, we can add our two recipes in there. <em>And it's done.</em> <br><br>
+
+                <br><br><br><hr><br>
+
+                <span class="subtitle">Overwriting Existing Recipes:</span> <br><br>
+
+                Say, you want an existing recipe to be different, remove it, OR you want the result to be modified a bit <br><p class="mc-dark-gray">(like more amount, name)</p>. <br><br> 
+                
+                The code is no different, <em>just where we put it</em>. 
+                
+                <br><br><br> > Here I made a recipe for a <p class="mc-gold">Golden Apple</p> that takes <p class="mc-yellow">nuggets</p> instead of ingots, <em>and gives 2.</em> <br><br>
+
+                The difference is this time, we put it in minecraft/recipes instead of our custom datapack folder.<br> <p class="mc-dark-gray">(This will overwrite the existing recipe)</p> <br><br><br>
+
+                And that's it! <em>We can make custom recipes, and overwrite existing ones.</em> <br><br>
+                
+
+                
+
+
               </span>
               <!-- Tooltips content later -->
           </div>
