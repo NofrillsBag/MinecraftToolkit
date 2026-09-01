@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Loot Tables </div> <span> - Entities & Chests</span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/1ZlEnCjFpMo" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,17 +37,34 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
-              <hr><br>
+              <h1>Random Loot</h1>
+              
+              <hr>
               <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
+                <span class="subtitle">Chests:</span> 
+                <br><br>
+                
+                Back on Misode, I went to <strong>LOOT TABLE</strong> generator. <br><br>
+
+                So I am running through the <p class="mc-red">usual modifications</p> you'd want in a loot table; <p class = "mc-gray">amount of drops, random durability, random enchantments, name, and lore; and combining them.</p> <br><br>
+
+                For note, in this video. I edited COMPONENTS,<br><br> <p class="mc-dark-aqua">Components</p> are the heart of custom items in general, this lets you <em>make custom items with effects & custom textures.</em> <br><br>
+
+                After creating the folder structure, and putting in the code. I gave myself chest; <br><br><br> <p class="mc-green">/give @s chest[block_entity_data={id:"minecraft:chest", LootTable:"chocolate:chests/custom_chest_loot"}]</p> <br><br>
+
+                <br><br><hr>
+                <span class="subtitle">Entity Loot:</span> 
+                <br><br>
+                In vanilla, you can only OVERRIDE <p class="mc-yellow">existing loot tables</p> for entities. <br><br>
+                Went back to the <strong>LOOT TABLE</strong> generator. And clicked <em>entity.</em> <br><br>
+
+                I added leather, and zombie flesh, and in the folder I added <p class="mc-aqua">minecraft/loot_table/entities</p>. Not chocolate, since we are overridng MINECRAFT. <br><br>
+
+                Then I just summoned the zombie, and boom there is our loot. <br><br><br><hr><br><br>
+
+                Now, you can take this a step further, and add more <p class="mc-light-purple">components</p> "attributes" <p class="mc-light-purple">for custom effects.</p> I will cover that myself, but you should play around with it. <br><br>
                 <br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
               </span>
               <!-- Tooltips content later -->
           </div>
