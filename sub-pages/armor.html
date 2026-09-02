@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Custom Armour </div> <span> - With Effects</span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/N8rk2IYPlXg" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,17 +37,72 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
+              <h1>Hypixel Skyblock Esque Armour:</h1>
               <hr><br>
               <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
+
+                <span class="subtitle">Without Effects:</span><br><br>
+
+                This only requires THREE new components to make a full "custom set", with a block as a helmet.<br><br>
+
+                <p class="mc-gray">A Sea Lantern Helmet, and a blue dyed leather armour set.</p> This is for a <p class="mc-dark-blue">Lapis Set</p>.
+                <br><br><br><hr><br><br>
+
+                The new three components that will be used are:<br><br> 
+                &#8618; <p class = "mc-gold">Equippable</p> for making it equippable evidently, put true for hurt and interact.<br>
+                &#8618; <p class = "mc-gold">Dyed Colour</p> For dying our armour.<br>
+                &#8618; <p class = "mc-gold">Item Model</p> for customizing the appearance into blocks.<br><br><br>
+
+                &#8618; <p class = "mc-dark-purple">Extra ones</p> Max Damage for more durability, Item Name and Lore.<br><br><br>
+                <hr><br><br>
+
+                Boots, Leggings and Chestplate, all only need ONE component, the <p class = "mc-gold">Dyed Colour</p> component. <br><br>
+                
+                So, I add just the dyed_colour component. Optionally I added max_damage for durability, try doing the similar leggings and chestplate yourself. <br><br>
+
+                <br>Now for the <p class="mc-blue">helmet</p>, we need to use the item_model component, and the equippable component; and we put the option "head". <br><br> 
+
+                &#8618; <p class = "mc-dark-purple">Then</p> add the <em>extra components</em>, max damage 600, name is Lapis Boots, and Custom Lore.<br><br>
+                
+                <br><br>Then, let's get all of our saved generated code, and go to chocolate/recipe and make lapis armour json files for each piece.
+                
+                <br><br><br><br><hr><br><br>
+
+                
+
+                <span class="subtitle">Adding Effects:</span><br><br>
+
+                Ok, cool we have armour that looks different. How about we make it <p class = "mc-blue">ACT different?</p> Like custom effects, like Hypixel Skyblock does it. <br><br>
+
+                All we have to do, is go back to our code. Paste it back into the generator, and for each one add: <br><br>
+
+                <p class = "mc-gold">Attribute Modifiers</p> <br><br>
+                
+                V
+                
                 <br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
+                <p class = "mc-dark-purple">Firstly</p>, we can add the armour, then the armour toughness, then a unique effect, say movement speed.<br><br>
+
+                <p class = "mc-dark-purple">Each of them need a unique ID</p>, this is just for organization. Say your datapack_name:item_effect. <br><br>
+                
+                <p class = "mc-dark-purple">For me</p>: chocolate:lapis_helmet_armor, chocolate:lapis_helmet_armor_toughness, chocolate:lapis_helmet_movement_speed, then chose the slot "legs" etc.<br><br>
+
+                I add 2 <p class="mc-dark-aqua"> for armor and toughness</p>, only 0.1 for movement speed since that scales a lot.<br><br><br>
+                
+                <em>Now, do the same with the other pieces paste it back in, add the attribute modifiers.</em>
+                <br><br><br><br>
+
+              
+
+                <hr><br><br>
+
+                Put the code back in, and now we have a full set of armour,<br> that looks different, and has custom effects. <br><br><br>
+                <p class="mc-dark-gray">Probably should make the movement speed 0.01 instead.</p>
+                
+
+
+ 
               </span>
               <!-- Tooltips content later -->
           </div>
