@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Custom Food </div> <span> - Textures and effects</span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/OCcrli1qV3A" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,20 +37,47 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
-              <hr><br>
-              <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
-                <br><br>
+            <span>
+              <br>
+              <span class="subtitle">Getting A Custom Texture:</span><br><br>
+              ----------<br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
-              </span>
-              <!-- Tooltips content later -->
-          </div>
+              So far, we've been using vanilla only textures. For <p class="mc-aqua">custom food</p>, that doesn't feel too sensible to use an existing texture.
+
+              <br><br>
+
+              That means, we need to make a <p class="mc-dark-aqua">resource pack</p> which is actually pretty easy, <em>max 6 lines of code</em>. <br><br><br>
+
+              <p class="mc-gray">-> Follow the Video for the folder structure. In later versions, pack.mcmeta may be different.</p><br><br><br>
+
+              <hr><br><br>
+
+              First, let's add my custom image to <p class="mc-gold">textures/item</p>. <br><br>
+              Then I made a file lavender_mash.json inside <p class="mc-gold">items</p> so the name of the item. What I pasted in, is the same for any item, all you do is change the name each time.<br><br>
+              Another lavender_mash.json inside <p class="mc-gold">models/item</p> this tells the game how it looks in your hand. I pasted something in again, each time you have a new item simply change the name.<br> <p class="mc-dark-gray">(For tools/weapons you replace generated with handheld.)</p><br><br>
+              <hr>
+              <br><br>
+
+              We can access the texture in game now with commands.<br><br>
+              
+              But we want a custom recipe for <p class="mc-dark-purple">food with custom effects</p>. So let's go back to <a href="https://misode.github.io/recipe" target="_blank">Misode</a>.<br><br>
+              V<br><br><br>
+              &#8618; <p class = "mc-gold">For Item Model</p> I put the name of the item, minecraft:lavender_mash.<br><br>
+              &#8618; <p class = "mc-gold">Then, I added food</p> simply just the amount of natural regeneration, and hunger bars it gives.<br><br>
+              &#8618; <p class = "mc-gold">Consumable</p> let's us add effects, to which I chose regen with an amplifier of one, and 40 ticks which is 2s.<br>
+              <p class="mc-dark-gray">Then I added basic extras; <em>name, and lore</em>.</p> <br><br>
+              <br><br><hr><br>
+              Then, I pasted it into a new file in the recipes in our <p class="mc-red">DATAPACK</p> not the resourcepack. <br><br>
+              
+              And we're done, all we have to do is add this resource pack folder into our games resource pack folder to see it.<br><br>
+
+
+
+
+
+            </span>
+            <!-- Tooltips content later -->
+        </div>
             
         </div>
       </div>
