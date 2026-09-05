@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Custom Items </div> <span> - Usable</span>
+            <div class="module-title-text">Usable Custom Items </div>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/lQ4QKHCK4ug" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,11 +37,59 @@
           <br><br>
 
         <div class="tooltips-module">
-          <h1>Custom Items, :</h1>
+          <h1>Animated Aspect Of The Void.</h1>
               <hr><br>
               <span>
+                <span class="subtitle">Animated Texture:</span><br><br>
+                Animated Textures are actually really easy, two things<br><br><br> &#8618; <p class = "mc-gold">16x128</p> png, <p class="mc-gray">(Long Vertically)</p> with all frames of the animation.<br><br> &#8618; <p class = "mc-gold">image.png.mcmeta</p> is a file that sits beside the texture, explaining details.<br><br><br><br><hr><br><br>
 
-                <span class="subtitle">Without Effects:</span><br><br>
+                So I take this <p class="mc-dark-aqua">16x128 image</p> put it into <strong>textures/item</strong>.<br><br> From the two other folders, copy the custom food's <p class="mc-light-purple">json files from items and models/item</p>, changing only their names, <em>and making generated into handheld</em>.<br><br><br>
+
+                Right beside our textures/item, we put the <p class = "mc-dark-aqua">image.png.mcmeta</p>; it's just a list of the frames.
+
+
+                
+                <br><br><br><hr>
+
+                <br><br><br>
+                <span class="subtitle">Recipe:</span><br><br>
+
+                Done this a couple times, so I'll be brief. Make the result a diamond sword, then <br><br>
+
+                The item_model is the same as the last module, minecraft:aotv. <br><br> <p class="mc-aqua">The two unique things we need to do</p>, is add a blank <em>custom data</em> component, then a <em>consumable componen</em> with really big eat time, <strong>optionally, add a name</strong>.<br><br>
+
+                Paste this recipe inside chocolate/recipe as aotv.json.
+
+                <br><br><br><br><hr><br><br>
+
+                <span class="subtitle">Right Click Teleport:</span><br><br>
+                Now this part is a lot, 7 new <p class="mc-light-purple">"Minecraft Code"</p> files.<br><br> 
+
+                What we are trying to do, is <p class="mc-gold">make the sword right click to teleport you forward 8 blocks, <em>with a cooldown</em></p>.<br><br><br><br><br>
+                
+
+                The idea is: <br><br> We make an <p class="mc-dark-aqua">achievement</p> that triggers when you <p class="mc-aqua">start eating the item</p> (right click), that has a reward that teleports you. It also starts a scoreboard timer to tick up, which resets every something seconds.<br><br><br>
+                <br><hr><br><br>
+                Go to data/chocolate, make two folders; <p class="mc-gray">advancement and function</p>.<br> Inside function, make another folder called <p class="mc-gray">aotv</p>. <br><br><br>
+
+                &#8618; <p class = "mc-gold">function/load.mcfunction</p>, gets another function create a scoreboard for the cooldown, when you LOAD the game.<br><br>
+                &#8618; <p class = "mc-gold">function/scores.mcfunction</p>, then makes that scoreboard cooldown.<br><br>
+                &#8618; <p class = "mc-gold">advancement/aotv_used.json</p>, sees that someone tried to use (eat) the aotv item, and rewards them with a function that starts the cooldown timer.<br><br>
+                &#8618; <p class = "mc-gold">aotv/activate.json</p>, checks the cooldown timer, and then gives the player their result, revokes the advancement to let them right click again.<br><br>
+                &#8618; <p class = "mc-gold">aotv/aotv_result.json</p>, is the actual teleport, starts the cooldown again.<br><br>
+                &#8618; <p class = "mc-gold">function/tick.mcfunction</p>, makes sure the cooldown timer always runs every TICK.<br><br>
+                &#8618; <p class = "mc-gold">function/timers.mcfunction</p>, just ticks down the clock.<br><br><br><br>
+
+                &#8618; <p class = "mc-gold">Lastly, go to the datapack's "minecraft" folder</p>, make a folder called <p class="mc-gray">tags/function</p>. Add tick.json and load.json, with the videos code; the game calls the mcfunctions <em>every tick, and every reload</em>.<br><br><br> 
+
+                <hr><br><br>
+
+                <span class="subtitle">See The Item:</span><br><br>
+                Craft the item again, try right clicking it.<br> You should teleport forwards, make a noise, and take a little bit of damage.                
+                <br><br><br>
+                
+                
+
 
               </span>
               <!-- Tooltips content later -->
