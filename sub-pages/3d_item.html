@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text"> 3D Items </div> <span> - Talisman </span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/jOuG3KVv7zo" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,17 +37,51 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
-              <hr><br>
-              <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
-                <br><br>
+              <h1> Miners Talisman </h1>
+              <hr><br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
+              <span class="subtitle">Block Bench:</span> <br><br><br>
+
+              This is actually REALLY easy. After you install <p class="mc-dark-red">Blockbench</p>, you click Java Item/Block, and give it our name <em>miner_talisman</em>.
+
+              <br><br>
+              
+              Click on the <strong>&#8942;</strong> on the top. Search "Add Cube" in the <p class="mc-aqua">middle and click it</p>.<br><br>
+
+              <p class="mc-dark-aqua">Add the cube</p>, with the new button. Look to the right on size, make it all 8. <br><br><br>
+
+              Now go to paint, and click <p class="mc-gray">Create Texture</p>, name it miner_talisman as well. Now, we just <p class="mc-gold">texture this</p>; so I'm just going to scribble on it.<br><br>
+
+              Then, go to DISPLAY, and we'll go through the options on the <p class="mc-red">left and tweak sizes and rotation</p>.<br><br>
+
+              <br><br><hr><br><br>
+
+              <span class="subtitle">Add Code:</span> <br><br><br>
+
+              Now, save so CTRL + S or top left File -> Save.<br><br><br>
+
+              <strong>Go back to your datapack:</strong> <br><br>
+              
+              &#8618; <p class = "mc-gold">Paste the texture</p> that was saved into textures/item.
+              <br><br>&#8618; <p class = "mc-gold">Put the json in models/item</p>; but make the changes I did in the video. 
+              <br><br>&#8618; <p class = "mc-gold">And finally, </p> copy & paste the other items in the item folder, <em>and change the name</em>.
+              <br><br> 
+
+              <br><br><br><hr><br><br>
+              <span class="subtitle">Recipe For Talisman Effect:</span> <br><br>
+
+
+              Now, we'll make a recipe that gives the user <p class="mc-dark-green">mining effeciency when you equip it in your offhand</p>.<br><br>
+              Which is just an attribute modifier we add mining_efficiency, <p class="mc-gray">make it like 100</p>, give it an Id to organize it; chocolate:mining_talisman_buff.<br><br>
+              Then we just add this code to the <p class="mc-dark-aqua">recipe folder in the pack.</p> <br><br><br><hr>
+
+              <br><br>
+
+              Boom, we're done.<br><br><br>
+              <span>
+                
+
+
               </span>
               <!-- Tooltips content later -->
           </div>

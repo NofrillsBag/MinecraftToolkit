@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Custom Block Shape/Textures </div> <span> - Overwrite</span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/vRcVLsuDUwE" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,18 +37,49 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
+              <h1>Blocks</h1>
               <hr><br>
-              <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
-                <br><br>
+              <span class="subtitle">Caveat:</span><br><br>
+              
+              For Custom Blocks, you can only overwrite existing blocks; their <p class="mc-dark-aqua">shape, texture and name</p>.
+              <br><br><br><hr><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
-              </span>
+              <span class="subtitle">Block Bench:</span><br><br>
+
+              So we're going to overwrite the <p class="mc-dark-gray">blast furnace</p> <em>texture, shape and name</em>. <br><br>
+
+              Do custom Java Block/Item. <p class="mc-aqua">Name it the block we're replacing</p> "blast_furnace" (<strong>or do it later like me</strong>). 
+              
+              <br><br><br>
+              Add a cube; <p class="mc-gray">make it 16x15x16, then a 12x1x12 cube.</p> <br><br>
+              
+              Go to paint and <p class="mc-dark-aqua">click on the shape you're trying to paint</p>, then hit create texture(s), name them stove0, stove1.
+              
+              <br><br>
+              
+              Now, I'll just paint on this, go to display; change the <p class="mc-aqua">scale, rotation and translation</p>.<br><br><br> Then Save.
+              <br><br><br><br><hr><br>
+              <span class="subtitle">Code:</span><br><br>
+              
+              Add "block/" to <p class="mc-gray">models and textures</p>.
+
+              <br><br>
+              Paste in the model, and change it like I did, and <strong>paste in the textures</strong>. <br>
+
+              <p class="mc-dark-gray">Optionally, rename the block. With lang/en_us.json.</p>
+
+              <br><br><br><hr><br>
+
+              And that's it.<br>
+
+              <p class="mc-dark-gray">Assuming you had no custom shape, you can just save the texture into the folder. If it's the same texture on all faces you just need one 16x16 image, if not then use blockbench to colour a random 16x16 block, then save that as the overwrite.</p>
+
+
+
+
+              <br><br>
+
+              
               <!-- Tooltips content later -->
           </div>
             
