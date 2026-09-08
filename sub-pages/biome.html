@@ -18,7 +18,7 @@
             <img src="../images/home.png" class="home-icon">
           </a>
           <div class="module-title">
-            <div class="module-title-text">Blank Datapack </div> <span> - Setup</span>
+            <div class="module-title-text">Custom Biomes </div> <span> - Trees, Foliage, Nature</span>
           </div>
         
 
@@ -27,7 +27,7 @@
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/50pDxOzZc9M" 
+                src="https://www.youtube.com/embed/PRwFZ9QD7m4" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -37,18 +37,56 @@
           <br><br>
 
         <div class="tooltips-module">
-              <h1>Creating A Blank Datapack</h1>
+              <h1>Custom Biome</h1>
               <hr><br>
-              <span>
-                This module is really simple, go into a world and type what is below in chat: 
-                <pre>/datapack create name "description"</pre>
-                <em>(name must be lowercase, spaces are replaced with _)</em>
-                <br><br>
+              <span class="subtitle">Folder Structure:</span><br><br>
 
-                <h6> To find it on your computer <em>(So we can add stuff to our datapack)</em>, exit the world. Select your world in minecraft, click Edit at the bottom. Open World Folder. Then click datapacks; open in say VSCode.</h6>
-                <br>
-                <br>
-              </span>
+              So for this module, I am not going to use the generator, because biomes ask for a LOT.<br><br> I am going to paste in my code; then tell you what parts you should look at to make customizations, because biomes are very lucrative.<br><br>
+
+              Add three folders in worldgen; <p class="mc-gray">biome, configured_feature, placed_feature</p>. Then, in minecraft folder, add <p class="mc-gray">dimension</p>.<br><br>
+
+              <br>
+              <hr><br>
+              <span class="subtitle">Features:</span><br><br>
+
+              IGNORE THE ERRORS & WARNINGS, THEY ARE FALSE.<br><br>
+
+              Features are the decor of your biome; <p class="mc-dark-gray">trees, rocks, flowers</p> etc. There is a LOT more you can do, but it'd be <p class="mc-green">too much to explain</p><br><br>
+
+              I will explain how YOU can customize these, not so much the structure. <br><br>
+              <br><br>
+              &#8618; <p class = "mc-gold">Rock Configured</p> Configured is the look, this is blob of block, if you want to customize this rock, change the <strong>name of the block</strong>.<br><br>
+              &#8618; <p class = "mc-gold">Flower Configured</p> Amplitude is max at 1, scale and seed are random, if you want to customize simply change the <strong>block</strong> in the states.<br><br>
+              &#8618; <p class = "mc-gold">Tree Configured</p> First section says under the tree is dirt, 2nd is saying how big the leaves are, 3rd is saying the leaves, 4th - 6th explain trunk size and log type, decorators is just leaf litter spawning in each direction.<br><br>
+              <br><br><br><br>
+              &#8618; <p class = "mc-gold">Rock Placed</p> Places is the mathematical placement of the rock, i'd recommend only changing <strong>count</strong> from here.<br><br>
+              &#8618; <p class = "mc-gold">Flower Placed</p> Slightly more complex, I'd personally only change the <strong>count and rarity</strong>, as it's pretty complex math.<br><br>
+              &#8618; <p class = "mc-gold">Tree Placed</p> Basically the same as the rock, just says can't be on the water, you can <strong>change the count</strong>.<br><br>
+              <br><br><br><br>
+              Optionally, I have extra code for placing grass. Leave this code as is.
+              <br><br>&#8618; <p class = "mc-light-purple">Grass, Grass Patch</p> Adds grass and tall grass.<br><br>
+              <br><br><br><br>
+              <hr><br>
+              <span class="subtitle">Biome:</span><br><br>
+              Now, we can go to worldgen/biome and create the <p class="mc-dark-aqua">biome specifications</p>. Here we can change <em>leaf, grass, short grass, tall grass, sky color</em>, and state which FEATURES (thing we did above) we want.<br><br>
+
+              I then specified <p class="mc-dark-red">carvers</p>, which let's caves spawn. Then <p class="mc-dark-red">spawners let's mob spawn</p>.
+
+              <br><br><br><br>
+              <hr><br>
+              <span class="subtitle">Naturally Spawning:</span><br><br>
+              This is the weird part, what we need to do. <p class="mc-aqua">Is take the BIG json file vanilla uses to math out it's biome spawning. And steal some of the spaces from other biome for ours</p><br><br>
+              So here, I recommend unfortunately having to use an AI, since there needs to be randomness. And humans suck at that.<br><br>
+
+              So go to the <p class="mc-gray">Github</p>, find this file. <p class="mc-dark-aqua">And you want to ask an AI to write up a program that changes each chocolate:enchanted_forest, and changes it to your name.</p><br><br>
+
+              <br><br>
+              <hr><br>
+              <span class="subtitle">See In Game:</span><br><br><br>
+
+              Boom, now we have our <p class="mc-light-purple">custom biome</p> in game.<br><br><br>
+              <p class="mc-dark-gray">Adding custom structures to the biome is really easy, if you already have a naturally spawning stucture, just add say chocolate:enchanted_forest to it.</p>
+
               <!-- Tooltips content later -->
           </div>
             
